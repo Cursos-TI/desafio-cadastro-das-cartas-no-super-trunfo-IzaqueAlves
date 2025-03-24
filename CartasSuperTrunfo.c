@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
 
     // Variáveis (CARTA 1)
     char estado[20];
-    char codigo[3];
+    char codigo[20];
     char cidade[20];
     int populacao;
     float area;
@@ -15,7 +16,7 @@ int main() {
 
     // Variáveis (CARTA 2)
     char estado2[20];
-    char codigo2[3];
+    char codigo2[20];
     char cidade2[20];
     int populacao2;
     float area2;
@@ -25,19 +26,20 @@ int main() {
     float percapta2;
 
 
-    // Entrada de dados
-    // (CARTA 1)
-
+    // Entrada de dados (CARTA 1)
     printf("***Carta 1***\n\n");
 
     printf("Qual o nome do estado? \n");
-    scanf("%s", estado);
+    fgets(estado, sizeof(estado), stdin);
+    estado[strcspn(estado, "\n")] = '\0';
 
     printf("Qual o código da carta? \n");
-    scanf("%s", codigo);
+    fgets(codigo, sizeof(codigo), stdin);
+    codigo[strcspn(codigo, "\n")] = '\0';
 
     printf("Qual o nome da cidade? \n");
-    scanf("%s", cidade);
+    fgets(cidade, sizeof(cidade), stdin);
+    cidade[strcspn(cidade, "\n")] = '\0';
 
     printf("Qual a população da cidade? \n");
     scanf("%i", &populacao);
@@ -51,18 +53,20 @@ int main() {
     printf("Quantos pontos turísticos há na cidade? \n");
     scanf("%d", &turisticos);
 
-    // (CARTA 2)
-
+    // Entrada de dados (CARTA 2)
     printf("***Carta 2***\n\n");
 
     printf("Qual o nome do estado? \n");
-    scanf("%s", estado2);
+    fgets(estado2, sizeof(estado2), stdin);
+    estado2[strcspn(estado2, "\n")] = '\0';
 
     printf("Qual o código da carta? \n");
-    scanf("%s", codigo2);
+    fgets(codigo2, sizeof(codigo2), stdin);
+    codigo2[strcspn(codigo2, "\n")] = '\0';
 
     printf("Qual o nome da cidade? \n");
-    scanf("%s", cidade2);
+    fgets(cidade2, sizeof(cidade2), stdin);
+    cidade2[strcspn(cidade2, "\n")] = '\0';
 
     printf("Qual a população da cidade? \n");
     scanf("%i", &populacao2);
