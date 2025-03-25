@@ -43,15 +43,20 @@ int main() {
 
     printf("Qual a população da cidade? \n");
     scanf("%i", &populacao);
+    getchar();
 
     printf("Qual a Área Geográfica da cidade (em km²)? \n");
     scanf("%f", &area);
+    getchar();
 
     printf("Qual o PIB da Cidade (Bilhões de reais)? \n");
     scanf("%f", &pib);
+    getchar();
 
     printf("Quantos pontos turísticos há na cidade? \n");
     scanf("%d", &turisticos);
+    getchar();
+
 
     // Entrada de dados (CARTA 2)
     printf("***Carta 2***\n\n");
@@ -70,24 +75,30 @@ int main() {
 
     printf("Qual a população da cidade? \n");
     scanf("%i", &populacao2);
+    getchar();
 
     printf("Qual a Área Geográfica da cidade (em km²)? \n");
     scanf("%f", &area2);
+    getchar();
 
     printf("Qual o PIB da Cidade (Bilhões de reais)? \n");
     scanf("%f", &pib2);
+    getchar();
 
     printf("Quantos pontos turísticos há na cidade? \n");
     scanf("%d", &turisticos2);
+    getchar();
 
     
     // Operadores (CARTA 1)
     densidade = populacao / area;
     percapta = pib / populacao;
 
+
     // Operadores (CARTA 2)
     densidade2 = populacao2 / area2;
     percapta2 = pib2 / populacao2;
+
 
     // Saída de dados (CARTA 1)
     printf ("***Carta 1***\n\n");
@@ -99,7 +110,8 @@ int main() {
     printf("PIB da cidade (Bilhões de reais): %.2f\n", pib);
     printf("Pontos turísticos: %d\n", turisticos);
     printf("Densidade: %.2f\n", densidade);
-    printf("PIB per capta: %.2f\n", percapta);
+    printf("PIB per capta: %.2f\n\n", percapta);
+
 
     // Saída de dados (CARTA 2)
     printf ("***Carta 2***\n\n");
@@ -112,6 +124,7 @@ int main() {
     printf("Pontos turísticos: %d\n", turisticos2);
     printf("Densidade: %.2f\n", densidade2);
     printf("PIB per capta: %.2f\n", percapta2);
+
 
     return 0;
 }
