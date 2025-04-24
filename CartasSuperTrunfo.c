@@ -126,5 +126,23 @@ int main() {
     printf("PIB per capta: %.2f\n", percapta2);
 
 
+    // Comparação de carta1 com carta2
+    /*
+    if ( populacao  > populacao2) {
+        printf("População: A carta %s Venceu!!! \n", codigo);
+    } else{
+        printf("População: A carta %s Venceu!!! \n", codigo2);
+    }
+    */
+
+    
+    /*
+    if (condicao) {
+    // bloco de código a ser executado se a condição for verdadeira
+    }else {
+    //bloco de código a ser executado se a condição for falsa
+    }
+    */
+
     return 0;
 }
