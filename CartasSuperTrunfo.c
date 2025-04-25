@@ -13,6 +13,7 @@ int main() {
     int turisticos;
     float densidade;
     float percapta;
+    float superPower;
 
     // Variáveis (CARTA 2)
     char estado2[20];
@@ -24,7 +25,7 @@ int main() {
     int turisticos2;
     float densidade2;
     float percapta2;
-
+    float superPower2;
 
     // Entrada de dados (CARTA 1)
     printf("***Carta 1***\n\n");
@@ -89,15 +90,17 @@ int main() {
     scanf("%d", &turisticos2);
     getchar();
 
-    
+
     // Operadores (CARTA 1)
     densidade = populacao / area;
     percapta = pib / populacao;
+    superPower = populacao + area + pib + turisticos;
 
 
     // Operadores (CARTA 2)
     densidade2 = populacao2 / area2;
     percapta2 = pib2 / populacao2;
+    superPower2 = populacao2 + area2 + pib2 + turisticos2;
 
 
     // Saída de dados (CARTA 1)
@@ -111,6 +114,7 @@ int main() {
     printf("Pontos turísticos: %d\n", turisticos);
     printf("Densidade: %.2f\n", densidade);
     printf("PIB per capta: %.2f\n\n", percapta);
+    printf("Super Power: %.2f\n\n", superPower);
 
 
     // Saída de dados (CARTA 2)
@@ -123,26 +127,64 @@ int main() {
     printf("PIB da cidade (Bilhões de reais): %.2f\n", pib2);
     printf("Pontos turísticos: %d\n", turisticos2);
     printf("Densidade: %.2f\n", densidade2);
-    printf("PIB per capta: %.2f\n", percapta2);
-
+    printf("PIB per capta: %.2f\n\n", percapta2);
+    printf("Super Power2: %.2f\n\n", superPower2);
+    
 
     // Comparação de carta1 com carta2
-    /*
     if ( populacao  > populacao2) {
         printf("População: A carta %s Venceu!!! \n", codigo);
-    } else{
+    } else if (populacao < populacao2){
         printf("População: A carta %s Venceu!!! \n", codigo2);
+    } else{
+        printf("População: As cartas %s e %s empataram!!! \n", codigo, codigo2); 
     }
-    */
 
-    
-    /*
-    if (condicao) {
-    // bloco de código a ser executado se a condição for verdadeira
-    }else {
-    //bloco de código a ser executado se a condição for falsa
+    if ( area  > area2) {
+        printf("Área: A carta %s Venceu!!! \n", codigo);
+    } else if ( area  < area2){
+        printf("Área: A carta %s Venceu!!! \n", codigo2);
+    } else{
+        printf("Área: As cartas %s e %s empataram!!! \n", codigo, codigo2); 
     }
-    */
+
+    if ( pib  > pib2) {
+        printf("PIB: A carta %s Venceu!!! \n", codigo);
+    } else if (pib < pib2){
+        printf("PIB: A carta %s Venceu!!! \n", codigo2);
+    } else{
+        printf("PIB: As cartas %s e %s empataram!!! \n", codigo, codigo2); 
+    }
+
+    if ( turisticos  > turisticos2) {
+        printf("Pontos Turísticos: A carta %s Venceu!!! \n", codigo);
+    } else if (turisticos < turisticos2){
+        printf("Pontos Turísticos: A carta %s Venceu!!! \n", codigo2);
+    } else{
+        printf("Pontos Turísticos: As cartas %s e %s empataram!!! \n", codigo, codigo2); 
+    }
+
+    if ( densidade  > densidade2) {
+        printf("Densidade: A carta %s Venceu!!! \n", codigo);
+    } else if (densidade < densidade2){
+        printf("Densidade: A carta %s Venceu!!! \n", codigo2);
+    } else{
+        printf("Densidade: As cartas %s e %s empataram!!! \n", codigo, codigo2); 
+    }
+
+    if ( percapta  > percapta2) {
+        printf("PIB per capita: A carta %s Venceu!!! \n", codigo);
+    } else if (percapta < percapta2){
+        printf("PIB per capita: A carta %s Venceu!!! \n", codigo2);
+    } else{
+        printf("PIB per capita: As cartas %s e %s empataram!!! \n", codigo, codigo2); 
+    }
+
+    if ( superPower  > superPower2) {
+        printf("Super Power: A carta %s Venceu!!! \n\n", codigo);
+    } else{
+        printf("Super Power: A carta %s Venceu!!! \n\n", codigo2);
+    }
 
     return 0;
 }
